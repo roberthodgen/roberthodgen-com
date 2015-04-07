@@ -1,8 +1,10 @@
-#### My Personal site
+## My Personal site
 
 > Static site which is served on http://www.roberthodgen.com
 
 Based upon the theme: https://github.com/IronSummitMedia/startbootstrap-landing-page
+
+__Still a work in-progress!__
 
 
 #### Premise
