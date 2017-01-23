@@ -24,12 +24,16 @@
       font-size: $font-size-base;
     }
 
-    &.indent-1 {
-      margin-left: 1rem;
+    &.indent-1:before {
+      font-size: $font-size-base;
+      color: $rh-color15;
+      content: '∙∙';
     }
 
-    &.indent-2 {
-      margin-left: 2rem;
+    &.indent-2:before {
+      font-size: $font-size-base;
+      color: $rh-color15;
+      content: '∙∙∙∙';
     }
 
     .code-key {
@@ -40,7 +44,8 @@
       color: $rh-color3;
 
       &.space-after:after {
-        content: ' ';
+        color: $rh-color15;
+        content: '∙';
       }
     }
 
