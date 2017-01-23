@@ -6,10 +6,11 @@ import angular from 'angular';
  * Import and declare AngularJS module dependencies
  */
 import 'angular-ui-router';
-import './home';
+import home from './home';
 
 const REQUIRES = [
-  'ui.router'
+  'ui.router',
+  home
 ];
 
 
