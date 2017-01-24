@@ -1,11 +1,37 @@
 @import "../app.style";
 
-.container-fluid.container-alt {
+.container-fluid.rh-container-code {
   background-color: #21252b;
   color: $rh-foreground;
 
   hr {
     border-top: $hr-border-width solid $rh-highlight;
+  }
+
+  & > .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.container-fluid {
+  & > .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.container-fluid.rh-footer {
+  background-color: #f7f7f7;
+  color: #636c72;
+
+  a {
+    color: #464a4c;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
