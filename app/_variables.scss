@@ -4,13 +4,15 @@ $headings-font-family: "Avro", Monaco, serif;
 
 $font-family-monospace: Inconsolata, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-$border-width: 1px !default;
+$border-width: 1px;
 $hr-border-width: $border-width * 3;
 
 $rh-background: #21252b;
 $rh-foreground: #9CA4B5;
 $rh-cursor: #5293D8;
 $rh-highlight: #3E4147;
+
+$font-size-h1: 3.5rem;
 
 $rh-color0: #16191F;
 $rh-color1: #D42533;
@@ -27,4 +29,4 @@ $rh-color11: #9C7048;
 $rh-color12: #1E6AA8;
 $rh-color13: #9344AB;
 $rh-color14: #4A858C;
-$rh-color15: #282A2E;
+$rh-color15: #363c4a;
