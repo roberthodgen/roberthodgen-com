@@ -23,21 +23,8 @@ const APP = angular.module('roberthodgen-com', REQUIRES);
 import locationProviderConfig from './location-provider.config';
 APP.config(locationProviderConfig);
 
-// import {RhContainer} from './rh-container';
-// APP.controller('RhContainer', RhContainer);
-//
-// import {rhContainerDirective} from './rh-container';
-// APP.directive('rhContainer', rhContainerDirective);
-//
-// import {RhContainerFluid} from './rh-container';
-// APP.controller('RhContainerFluid', RhContainerFluid);
-//
-// import {rhContainerFluidDirective} from './rh-container';
-// APP.directive('rhContainerFluid', rhContainerFluidDirective);
-//
-// import {rhHeroDirective} from './rh-hero';
-// APP.directive('rhHero', rhHeroDirective);
-//
+
+
 // import {rhParallaxDirective} from './rh-parallax';
 // APP.directive('rhParallax', rhParallaxDirective);
 
