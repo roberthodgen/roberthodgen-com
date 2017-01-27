@@ -1,5 +1,6 @@
 import template from './home.template.html';
 
+
 function stateProviderConfig ($stateProvider) {
   'ngInject';
 

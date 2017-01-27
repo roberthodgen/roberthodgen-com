@@ -5,12 +5,12 @@ import angular from 'angular';
 /*
  * Import and declare AngularJS module dependencies
  */
-import 'angular-ui-router';
 import home from './home';
+import notFound from './not-found';
 
 const REQUIRES = [
-  'ui.router',
-  home
+  home,
+  notFound
 ];
 
 
@@ -22,11 +22,6 @@ const APP = angular.module('roberthodgen-com', REQUIRES);
 
 import locationProviderConfig from './location-provider.config';
 APP.config(locationProviderConfig);
-
-
-
-// import {rhParallaxDirective} from './rh-parallax';
-// APP.directive('rhParallax', rhParallaxDirective);
 
 
 /*

@@ -1,0 +1,129 @@
+@import "../app.style";
+
+
+[not-found-ctrl].not-found-ctrl {
+
+
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-576.jpg') no-repeat center center;
+    }
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 575px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-576@2x.jpg') no-repeat center center;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-768.jpg') no-repeat center center;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 576px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-768@2x.jpg') no-repeat center center;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-992.jpg') no-repeat center center;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (max-width: 991px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-992@2x.jpg') no-repeat center center;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-1200.jpg') no-repeat center center;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 992px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-1200@2x.jpg') no-repeat center center;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) and (max-width: 1999px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-2000.jpg') no-repeat center center;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) and (max-width: 1999px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1200px) and (max-width: 1999px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-2000@2x.jpg') no-repeat center center;
+    }
+  }
+
+  // XXL devices (wide-format desktops, 2000px and up)
+  @media (min-width: 2000px) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-3000.jpg') no-repeat center center;
+    }
+  }
+
+  // XXL devices (wide-format desktops, 1200px and up)
+  @media (min-width: 2000px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 2000px) and (min-resolution: 192dpi) {
+    .container-fluid.rh-container-hero {
+      background: $rh-highlight url('../assets/DSC04210-3000@2x.jpg') no-repeat center center;
+    }
+  }
+
+  .container-fluid.rh-container-hero {
+    color: #fff;
+    background-color: $rh-highlight;
+    background-size: cover;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-shadow: .1rem .1rem .15rem rgba(0, 0, 0, 0.7);
+    }
+
+    @media (min-width: 576px) {
+      .hero-message {
+        padding-left: 50%;
+      }
+    }
+
+    .hero-message {
+      text-align: right;
+      padding-top: 25%;
+      padding-bottom: 30%;
+
+      .btn-hero {
+        margin-top: 1rem;
+        @include button-variant(#3f2f32, #fff, #fff);
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+      }
+    }
+  }
+}
