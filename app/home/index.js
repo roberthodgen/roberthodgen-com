@@ -1,7 +1,7 @@
 import angular from 'angular';
+
 import uiRouter from 'angular-ui-router';
 
-import './home.style.scss';
 
 const MODULE_NAME = 'roberthodgen-com.home',
   MODULE = angular.module(MODULE_NAME, [uiRouter]);

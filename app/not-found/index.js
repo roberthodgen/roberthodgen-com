@@ -1,7 +1,6 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
 
-import './not-found.style.scss';
+import uiRouter from 'angular-ui-router';
 
 
 const MODULE_NAME = 'roberthodgen-com.not-found',

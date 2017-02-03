@@ -1,5 +1,7 @@
 import './app.html';
 
+import './app.style.scss';
+
 import angular from 'angular';
 
 /*
@@ -7,10 +9,12 @@ import angular from 'angular';
  */
 import home from './home';
 import notFound from './not-found';
+import ageFilter from './age-filter';
 
 const REQUIRES = [
   home,
-  notFound
+  notFound,
+  ageFilter
 ];
 
 
