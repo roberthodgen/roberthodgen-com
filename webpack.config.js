@@ -1,10 +1,13 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: [
     './roberthodgen-com-webapp/app.js'
   ],
   output: {
     filename: 'bundle.js',
-    path: './roberthodgen-com-server/dist/'
+    path: './roberthodgen-com-server/dist/',
+    sourceMapFilename: '[file].map'
   },
   module: {
     loaders: [
@@ -55,5 +58,10 @@ module.exports = {
       }
     ]
   },
-  plugins: []
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      'sourceMap': true
+    })
+  ],
+  devtool: 'source-map'
 };
