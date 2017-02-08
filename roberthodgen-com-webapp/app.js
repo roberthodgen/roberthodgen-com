@@ -1,6 +1,6 @@
 import './app.html';
-
 import './app.style.scss';
+import './assets/codes.gpg';
 
 import angular from 'angular';
 
