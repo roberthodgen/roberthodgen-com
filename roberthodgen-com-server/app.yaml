@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+
+handlers:
+- url: /api/v1/.*
+  script: api_v1.APP
+
+- url: /_ah/warmup
+  script: api_v1.APP
+  secure: always
+
+- url: /.*
+  script: application_servlet.APP
+
+
+libraries:
+- name: webapp2
+  version: latest
+
+
+inbound_services:
+- warmup

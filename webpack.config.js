@@ -1,10 +1,10 @@
 module.exports = {
   entry: [
-    './app/app.js'
+    './roberthodgen-com-webapp/app.js'
   ],
   output: {
     filename: 'bundle.js',
-    path: './dist'
+    path: './roberthodgen-com-server/dist/'
   },
   module: {
     loaders: [
