@@ -57,7 +57,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gpg)$/,
+        test: /\.(gpg|txt)$/,
         loaders:[
           'file-loader?name=[name].[ext]'
         ]
