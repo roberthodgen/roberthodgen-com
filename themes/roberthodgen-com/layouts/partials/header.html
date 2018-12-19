@@ -1,0 +1,12 @@
+<header role="banner" class="container my-4">
+  <!-- TODO: Place image here, if feature image is present. -->
+  {{ with .Title }}
+    <h1>{{ . }}</h1>
+  {{ end }}
+  {{ with .Params.subtitle }}
+    <div class="lead">{{ . }}</div>
+  {{ end }}
+  {{ if (isset .Params "title") or (isset .Params "subtitle") }}
+    <hr />
+  {{ end }}
+</header>

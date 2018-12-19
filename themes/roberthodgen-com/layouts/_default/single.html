@@ -1,0 +1,10 @@
+{{ define "header" }}
+  {{- partial "header.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+  <article role="article" class="container">
+    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+    {{.Content}}
+  </article>
+{{ end }}

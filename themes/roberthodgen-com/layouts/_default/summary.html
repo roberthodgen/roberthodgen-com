@@ -1,0 +1,14 @@
+<article role="article" class="card mb-4">
+  <div class="card-body">
+    <header>
+      <h5 class="card-title">{{ .Title }}</h5>
+      <p class="card-subtitle mb-4 text-muted">{{ .Date.Format "Jan 2, 2006" }}</h6>
+    </header>
+    <p class="card-text">
+      {{ .Summary }}
+    </p>
+    <footer>
+      <a href='{{ .Permalink }}' class="card-link">Read more</a>
+    </footer>
+  </div>
+</article>

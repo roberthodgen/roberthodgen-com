@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <header role="banner" class="container">
+    <h1>{{ .Site.Title }}</h1>
+  </header>
+  <main role="main">
+    <div class="container">
+      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+      {{.Content}}
+    </div>
+  </main>
+{{ end }}

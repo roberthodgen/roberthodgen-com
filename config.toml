@@ -1,0 +1,4 @@
+baseURL = "http://www.robhodgen.com/"
+languageCode = "en-us"
+title = "Robert Hodgen"
+theme = "roberthodgen-com"
