@@ -27,6 +27,8 @@ Sync up to Google Cloud Storage, e.g.:
 $ gsutil rsync -R public gs://www.roberthodgen.com
 ```
 
+// TODO: get Travis CI working on any merge or push to master
+
 ## Developing
 
 Run a Hugo development server:
