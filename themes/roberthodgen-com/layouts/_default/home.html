@@ -1,10 +1,12 @@
-{{ define "main" }}
+{{ define "header" }}
   <header role="banner" class="container">
+    <!-- TODO: add site banner image -->
     <h1>{{ .Site.Title }}</h1>
   </header>
-  <main role="main">
-    <div class="container">
-      {{.Content}}
-    </div>
+{{ end }}
+
+{{ define "main" }}
+  <main role="main" class="container">
+    {{.Content}}
   </main>
 {{ end }}
