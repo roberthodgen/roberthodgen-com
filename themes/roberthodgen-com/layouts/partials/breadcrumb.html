@@ -14,7 +14,7 @@
     <li class="breadcrumb-item active" aria-current="page">
       {{ .p1.Title }}
     </li>
-  {{ else }}
+  {{ else if not .p1.IsHome }}
     <li class="breadcrumb-item">
       <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
     </li>
