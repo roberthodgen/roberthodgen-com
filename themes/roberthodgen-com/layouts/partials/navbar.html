@@ -1,6 +1,6 @@
 {{ $thisUrl := .URL}}
 {{ $thisPage := .Page }}
-<nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+<nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container">
     <a href="/" class="navbar-brand">Robert Hodgen</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
-        {{ range union (slice .Site.Home) .Site.Sections }}
+        {{ range .Site.Sections.ByTitle }}
           <!-- ($thisUrl == .URL) || ($thisPage.InSection . && !.IsHome && !$this.IsHome) -->
           {{ $isActive := or (eq $thisUrl .URL) (and ($thisPage.InSection .) (not .IsHome) (not $thisPage.IsHome)) }}
           <li class="nav-item">
