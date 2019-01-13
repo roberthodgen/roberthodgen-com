@@ -11,3 +11,5 @@ deploy:
   skip_cleanup: true
   local-dir: public
   acl: public-read
+  on:
+    branch: hugo
