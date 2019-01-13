@@ -1,5 +1,6 @@
 ---
 title: It was nice meeting you.
+layout: page
 ---
 
 _Get in touch with Rob_
