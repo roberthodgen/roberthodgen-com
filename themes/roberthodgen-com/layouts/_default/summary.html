@@ -2,7 +2,9 @@
   <div class="card-body">
     <header>
       <h5 class="card-title">{{ .Title }}</h5>
-      <p class="card-subtitle mb-4 text-muted">{{ .Date.Format "Jan 2, 2006" }}</h6>
+      {{ if ne .Params.Date nil }}
+        <p class="card-subtitle mb-4 text-muted">{{ .Date.Format "Jan 2, 2006" }}</h6>
+      {{ end }}
     </header>
     <p class="card-text">
       {{ .Summary }}
