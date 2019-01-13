@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
-        {{ range union (slice .Site.Home) (union (.Site.Sections) (slice (.Site.GetPage "about"))) }}
+        {{ range union (slice .Site.Home) .Site.Sections }}
           <!-- ($thisUrl == .URL) || ($thisPage.InSection . && !.IsHome && !$this.IsHome) -->
           {{ $isActive := or (eq $thisUrl .URL) (and ($thisPage.InSection .) (not .IsHome) (not $thisPage.IsHome)) }}
           <li class="nav-item">
