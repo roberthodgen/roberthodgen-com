@@ -1,0 +1,13 @@
+services:
+- docker
+script:
+- make build
+deploy:
+  provider: gcs
+  access_key_id: GOOGZZ7J2NRZNTUH7OODCBSJ
+  secret_access_key:
+    secure: YIdu8N5V1rMlcFGBBJVxH+RpZog8rFwWlFRm10LcFKyw3Bynnt9gfRqFCzpfa/lVx2F1TMZHdMCoLQMs8OOGLsRHW6+WBgPz5cvaBaxA9hZXf7tBaCy/RLdwgApIV7cZzYLgAbnILtB60zFOk98C9EqppGfRbzTyTbxjZmpcDqS6e3aMLKoGi32E3jr1PCAxzVud+2GJtWtUM6E9xSD+eaMbDHC0Xfo4QFdXIBJQy0ZKLNKzoN12K7cku817q1zMjFgj9oql0Fy+SGilTggoMJtF2l17ouet5tRI3GMd/PjXvyvlFhdTuyPuf8XQ8IugUajiwSjTQws+KtWOSWr45M4QyQehby7kXnXgJ9VsUYD/dqA5qQBxcMBlWErXG5Sx0bW/TCg/WtCsI1Rtgm7qpaLUErerwIAZa79AHmu9GeyJx+YkRbHcVtCFq58PxNJZGytj16u9upqUcG5A5RRRQYO6wiYLHYdkG8o0ER5ocbEBDre/ChTWgBZgWRur6VuDqOAJri7AiABW8GwKBPiOsFSw0uGeUYRxQDi258SKmNlRJpAu72isZbL5QWYDZt8FSbwg9mokzJgZzJFhj4MFWOf/RfXk2XQyYybFvTS3oDdyuzUHn+M6AmZpDLEZQ0LedTZ2ik2V7j9RkmYwB3pi+ZGtmb4piTtMMSz7hhZdH8k=
+  bucket: www.robhodgen.com
+  skip_cleanup: true
+  local-dir: public
+  acl: public-read
