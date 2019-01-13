@@ -1,10 +1,22 @@
 <article role="article" class="card mb-4">
   <div class="card-body">
     <header>
-      <h5 class="card-title">{{ .Title }}</h5>
-      {{ if ne .Params.Date nil }}
-        <p class="card-subtitle mb-4 text-muted">{{ .Date.Format "Jan 2, 2006" }}</h6>
+      <h5 class="card-title">
+        {{ .Title }}
+        {{ if isset .Params "categories" }}
+          {{ range .Param "categories" }}
+            <span class="badge badge-secondary">{{ . }}</span>
+          {{ end }}
       {{ end }}
+      </h5>
+      <p class="card-subtitle mb-4 text-muted">
+        {{ if ne .Params.Date nil }}
+          {{ .Date.Format "Jan 2, 2006" }}
+        {{ end }}
+        {{ if isset .Params "location" }}
+          <em>{{ .Param "location" }}</em>
+        {{ end }}
+      </p>
     </header>
     <p class="card-text">
       {{ .Summary }}
