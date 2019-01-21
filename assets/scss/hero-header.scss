@@ -1,0 +1,105 @@
+$rh-highlight: #3E4147;
+
+header {
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-576.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 575px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-576@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-768.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 576px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-768@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-992.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (max-width: 991px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-992@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-1200.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 992px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-1200@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) and (max-width: 1999px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-2000.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) and (max-width: 1999px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1200px) and (max-width: 1999px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-2000@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // XXL devices (wide-format desktops, 2000px and up)
+  @media (min-width: 2000px) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-3000.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // XXL devices (wide-format desktops, 1200px and up)
+  @media (min-width: 2000px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 2000px) and (min-resolution: 192dpi) {
+    &.header-hero {
+      background: $rh-highlight url('/img/DSC04309-3000@2x.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+}

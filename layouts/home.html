@@ -1,0 +1,9 @@
+{{ define "header" }}
+  {{- partial "hero-header.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+  <main role="main" class="container">
+    {{.Content}}
+  </main>
+{{ end }}

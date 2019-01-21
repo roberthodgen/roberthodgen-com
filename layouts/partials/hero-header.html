@@ -1,0 +1,14 @@
+{{ $style := resources.Get "scss/hero-header.scss" | resources.ToCSS | resources.Minify }}
+<style>{{ $style.Content | safeCSS }}</style>
+<header role="banner" class="fluid-container header-hero mb-4">
+  <div class="container py-5">
+    <div style="padding-top: 25%; padding-bottom: 30%; padding-right: 50%;">
+      <h1 class="display-4 text-white" style="text-shadow: 0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.7)">
+        Robert Hodgen
+      </h1>
+      {{ with .Params.subtitle }}
+        <h5 class="text-white" style="text-shadow: 0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.7);">{{ . }}</h5>
+      {{ end }}
+    </div>
+  </div>
+</header>
