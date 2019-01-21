@@ -7,7 +7,7 @@ categories:
 - Jobs
 ---
 
-Ran IT support, network infrastrcture, and security for 200 users across 20 offices.
+Ran IT support, network infrastructure, and security for 200 users across 20 offices.
 
 <!--more-->
 

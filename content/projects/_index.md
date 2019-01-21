@@ -2,4 +2,4 @@
 title: Projects
 ---
 
-Rob's Awsome Projects(TM)
+Rob's Awesome Projects(TM)

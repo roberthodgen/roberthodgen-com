@@ -13,9 +13,9 @@ I built and maintained mobile and web applications as a product technical team l
 
 I started working at Auto Data Direct as an Application Developer on their TOW123 product. We maintained large scale webapps built in jQuery UI. I learned and used Java for the first time at Auto Data Direct.
 
-As I became more familar with Auto Data Direct's tech stack I was promoted to Senior Software Developer and made Technical Team Lead of the TOW123 product. I oversaw, managed, and planned a new mobile App offering. Shipping a minimum viable product quickly and new features on a regular basis. This product was pulled from the market in the sumer of 2017 and I moved into an internal modernization project.
+As I became more familiar with Auto Data Direct's tech stack I was promoted to Senior Software Developer and made Technical Team Lead of the TOW123 product. I oversaw, managed, and planned a new mobile App offering. Shipping a minimum viable product quickly and new features on a regular basis. This product was pulled from the market in the summer of 2017 and I moved into an internal modernization project.
 
-I begun doing _DevOps_ for a variety of products and helped assist with a planned cloud migration. This included containerizing all our deployables. Ultimatly one project had a complete CI/CD pipeline based off `git` branches and merges.
+I begun doing _DevOps_ for a variety of products and helped assist with a planned cloud migration. This included containerizing all our deployables. Ultimately one project had a complete CI/CD pipeline based off `git` branches and merges.
 
 **Titles:** Application Developer, Senior Software Developer
 
