@@ -9,6 +9,8 @@ subtitle: Creator of cool things. Techie. Explorer.
 
 Robert believes great software is art, software can change the world, and great software is worth making.
 
-<a href="/about" class="btn btn-outline-primary">
-  Read more about Robert
+Today I design, build, and maintain complex systems.
+
+<a href="{{< ref "/about" >}}" class="btn btn-outline-primary">
+  Read more about me
 </a>
