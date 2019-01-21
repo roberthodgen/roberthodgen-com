@@ -2,6 +2,7 @@
 title: Chief Technology Officer at Opphub
 weight: 2
 location: Tallahassee, FL
+start: 2014
 categories:
 - Jobs
 ---

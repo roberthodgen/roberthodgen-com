@@ -2,6 +2,7 @@
 title: Director of Technology at North Florida Financial Corporation
 weight: 1
 location: Tallahassee, FL
+start: 2012
 categories:
 - Jobs
 ---

@@ -2,6 +2,7 @@
 title: Senior Software Developer at Kikoda
 weight: 4
 location: Tallahassee, FL
+start: 2019
 categories:
 - Jobs
 ---

@@ -16,6 +16,9 @@
         {{ if isset .Params "location" }}
           <em>{{ .Param "location" }}</em>
         {{ end }}
+        {{ if isset .Params "start" }}
+          ({{ .Param "start" }})
+        {{ end }}
       </p>
     </header>
     <p class="card-text">

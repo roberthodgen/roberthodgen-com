@@ -2,6 +2,7 @@
 title: Application Developer, Senior Software Developer at Auto Data Direct
 weight: 3
 location: Tallahassee, FL
+start: 2015
 categories:
 - Jobs
 ---
