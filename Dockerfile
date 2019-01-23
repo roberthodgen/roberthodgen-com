@@ -6,4 +6,4 @@ FROM roberthodgen/hugo:0.53-extended AS builder
 
 COPY --from=source /usr/src/hugo .
 
-RUN hugo
+RUN hugo --minify
