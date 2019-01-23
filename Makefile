@@ -21,18 +21,18 @@ serve:
 
 .PHONY: deploy
 deploy: build updated-distribution.json
-	@aws s3 cp public s3://com.roberthodgen.www${GIT_REV} \
+	@aws s3 cp build s3://com.roberthodgen.www${GIT_REV} \
 		--recursive \
 		--exclude "*" \
 		--include "*.js" \
 		--include "*.css" \
 		--cache-control "max-age=31536000"
-	@aws s3 cp public s3://com.roberthodgen.www/${GIT_REV} \
+	@aws s3 cp build s3://com.roberthodgen.www/${GIT_REV} \
 		--recursive \
 		--exclude "*" \
 		--include "*.html" \
 		--cache-control "no-cache"
-	@aws s3 cp public s3://com.roberthodgen.www/${GIT_REV} \
+	@aws s3 cp build s3://com.roberthodgen.www/${GIT_REV} \
 		--recursive \
 		--exclude "*.js" \
 		--exclude "*.css" \
@@ -45,7 +45,7 @@ cloudfront-distribution.json:
 	@aws cloudfront get-distribution-config --id=E2ZKY8YC7GKC4C > cloudfront-distribution.json
 
 etag:
-	@python get-etag.py > etag
+	@python scripts/get-etag.py > etag
 
 updated-distribution.json: cloudfront-distribution.json etag
-	@python update-origin.py ${GIT_REV}
+	@python scripts/update-origin.py ${GIT_REV}
