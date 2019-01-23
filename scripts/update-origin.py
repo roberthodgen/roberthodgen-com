@@ -7,7 +7,7 @@ def main():
     if not sys.argv[1]:
         sys.exit(2)
     try:
-        with open('updated-distribution.json', 'w') as f:
+        with open('update-distribution.json', 'w') as f:
             config = read_config()
             config['Origins']['Items'][0]['OriginPath'] = '/' + sys.argv[1]
             f.write(json.dumps(config))

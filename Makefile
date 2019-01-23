@@ -13,14 +13,15 @@ clean:
 	@rm -rfd build
 	@rm -f cloudfront-distribution.json
 	@rm -f etag
-	@rm -f updated-distribution.json
+	@rm -f update-distribution.json
 
 .PHONY: serve
 serve:
 	@docker run --rm=true -p=1313:1313 -v=$(shell pwd):/usr/src/hugo roberthodgen/hugo:0.53-extended serve --bind=0.0.0.0 --buildDrafts
 
 .PHONY: deploy
-deploy: build updated-distribution.json
+deploy: build update-distribution.json
+	@echo "Beginning S3 synchronization..."
 	@aws s3 cp build s3://com.roberthodgen.www${GIT_REV} \
 		--recursive \
 		--exclude "*" \
@@ -38,16 +39,27 @@ deploy: build updated-distribution.json
 		--exclude "*.css" \
 		--exclude "*.html" \
 		--cache-control "max-age=86400"
+	@echo "Synchronized."
 	@aws configure set preview.cloudfront true
-	@aws cloudfront update-distribution --distribution-config=file://updated-distribution.json --id=${CLOUDFRONT_DISTRIBUTION_ID} --if-match=$(shell cat etag) 2>&1
-	@aws cloudfront create-invalidation --distribution-id=${CLOUDFRONT_DISTRIBUTION_ID} --paths="/*" 2>&1
+	@aws cloudfront update-distribution --distribution-config=file://update-distribution.json --id=E2ZKY8YC7GKC4C --if-match=$(shell cat etag) 2>&1
+	@aws cloudfront create-invalidation --distribution-id=E2ZKY8YC7GKC4C --paths="/*" 2>&1
+	@echo "Deploy done."
 
 cloudfront-distribution.json:
+	@echo "Beginning CloudFront distribution config fetch..."
 	@aws configure set preview.cloudfront true
-	@aws cloudfront get-distribution-config --id=${CLOUDFRONT_DISTRIBUTION_ID} >cloudfront-distribution.json 2>&1
+	@aws cloudfront get-distribution-config --id=E2ZKY8YC7GKC4C >cloudfront-distribution.json 2>&1
+	@echo "Fetched. cloudfront-distribution.json:"
+	@cat cloudfront-distribution.json
 
 etag:
+	@echo "Beginning ETag retrieval..."
 	@python scripts/get-etag.py > etag 2>&1
+	@echo "Retrieved ETag. etag:"
+	@cat etag
 
-updated-distribution.json: cloudfront-distribution.json etag
+update-distribution.json: cloudfront-distribution.json etag
+	@echo "Beginning distribution configuration transformation..."
 	@python scripts/update-origin.py ${GIT_REV} 2>&1
+	@echo "Transformed. update-distribution.json:"
+	@cat update-distribution.json
