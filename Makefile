@@ -38,8 +38,8 @@ deploy: build updated-distribution.json
 		--exclude "*.css" \
 		--exclude "*.html" \
 		--cache-control "max-age=86400"
-	@aws cloudfront update-distribution --distribution-config=file://updated-distribution.json --id=${CLOUDFRONT_DISTRIBUTION_ID} --if-match=$(shell cat etag) >/dev/null 2>&1
-	@aws cloudfront create-invalidation --distribution-id=${CLOUDFRONT_DISTRIBUTION_ID} --paths="/*" >/dev/null 2>&1
+	@aws cloudfront update-distribution --distribution-config=file://updated-distribution.json --id=${CLOUDFRONT_DISTRIBUTION_ID} --if-match=$(shell cat etag) 2>&1
+	@aws cloudfront create-invalidation --distribution-id=${CLOUDFRONT_DISTRIBUTION_ID} --paths="/*" 2>&1
 
 cloudfront-distribution.json:
 	@aws cloudfront get-distribution-config --id=${CLOUDFRONT_DISTRIBUTION_ID} >cloudfront-distribution.json 2>&1
@@ -48,4 +48,4 @@ etag:
 	@python scripts/get-etag.py > etag 2>&1
 
 updated-distribution.json: cloudfront-distribution.json etag
-	@python scripts/update-origin.py ${GIT_REV} >/dev/null 2>&1
+	@python scripts/update-origin.py ${GIT_REV} 2>&1
