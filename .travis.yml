@@ -10,7 +10,7 @@ script:
 - make build
 deploy:
   on:
-    branch: hugo
+    branch: master
   provider: script
   script: make deploy
   skip_cleanup: true
