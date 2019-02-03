@@ -53,7 +53,7 @@ cloudfront-distribution.json:
 
 etag:
 	@echo "Beginning ETag retrieval..."
-	@python scripts/get-etag.py > etag
+	@python scripts/get-etag.py
 	@echo "Retrieved ETag. etag:"
 	@cat etag
 

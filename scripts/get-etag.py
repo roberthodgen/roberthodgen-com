@@ -7,7 +7,7 @@ def main():
     try:
         with open('cloudfront-distribution.json', 'r') as f:
             data = json.loads(f.read())
-            print data['ETag']
+            print(data['ETag'])
     except:
         sys.exit(1)
 
