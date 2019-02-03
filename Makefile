@@ -49,12 +49,11 @@ cloudfront-distribution.json:
 	@echo "Beginning CloudFront distribution config fetch..."
 	@aws configure set preview.cloudfront true
 	@aws cloudfront get-distribution-config --id=E2ZKY8YC7GKC4C >cloudfront-distribution.json 2>&1
-	@echo "Fetched. cloudfront-distribution.json:"
-	@cat cloudfront-distribution.json
+	@echo "Fetched cloudfront-distribution.json."
 
 etag:
 	@echo "Beginning ETag retrieval..."
-	@python scripts/get-etag.py > etag 2>&1
+	@python scripts/get-etag.py > etag
 	@echo "Retrieved ETag. etag:"
 	@cat etag
 
