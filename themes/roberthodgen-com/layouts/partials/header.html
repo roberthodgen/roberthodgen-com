@@ -1,10 +1,29 @@
 <header role="banner" class="container my-4">
   <!-- TODO: Place image here, if feature image is present. -->
-  {{ with .Title }}
-    <h1>{{ . }}</h1>
-  {{ end }}
+  <h1>
+    {{ .Title }}
+  </h1>
   {{ with .Params.subtitle }}
     <div class="lead">{{ . }}</div>
+  {{ end }}
+  {{ if isset .Params "categories" }}
+    <h3>
+        {{ range .Param "categories" }}
+          {{ $name := . }}
+          {{ with $.Site.GetPage (printf "/%s/%s" "categories" ($name | urlize)) }}
+            <a href="{{ .Permalink }}" class="badge badge-secondary">{{ $name }}</a>
+          {{ end }}
+        {{ end }}
+    </h3>
+  {{ end }}
+  {{ if ne .Params.Date nil }}
+    {{ .Date.Format "Jan 2, 2006" }}
+  {{ end }}
+  {{ if isset .Params "location" }}
+    <em>{{ .Param "location" }}</em>
+  {{ end }}
+  {{ if isset .Params "start" }}
+    ({{ .Param "start" }})
   {{ end }}
   {{ if (isset .Params "title") or (isset .Params "subtitle") }}
     <hr />
