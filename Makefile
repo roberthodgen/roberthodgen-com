@@ -41,8 +41,8 @@ deploy: build update-distribution.json
 		--cache-control "max-age=86400"
 	@echo "Synchronized."
 	@aws configure set preview.cloudfront true
-	@aws cloudfront update-distribution --distribution-config=file://update-distribution.json --id=E2ZKY8YC7GKC4C --if-match=$(shell cat etag) 2>&1
-	@aws cloudfront create-invalidation --distribution-id=E2ZKY8YC7GKC4C --paths="/*" 2>&1
+	@aws cloudfront update-distribution --distribution-config=file://update-distribution.json --id=E2ZKY8YC7GKC4C --if-match=$(shell cat etag) >/dev/null 2>&1
+	@aws cloudfront create-invalidation --distribution-id=E2ZKY8YC7GKC4C --paths="/*" >/dev/null 2>&1
 	@echo "Deploy done."
 
 cloudfront-distribution.json:
