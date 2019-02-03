@@ -1,5 +1,5 @@
 # roberthodgen-com
-> Personal site.
+> My personal site.
 
 Live site: http://www.roberthodgen.com/
 
