@@ -3,10 +3,10 @@ title: About
 ---
 
 <p class="lead">
-  I am a full-stack software engineer who works with modern web technologies to make great web applications.
+  I am a full-stack software engineer who works with modern web technologies to make innovative web applications.
 </p>
 
-I believe great software is art, software can change the world, and great software is worth making.
+I believe software is art, software can change the world, and great software is worth making.
 
 ### History and experience
 
