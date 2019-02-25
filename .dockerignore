@@ -1,0 +1,7 @@
+/build
+/.git
+etag
+update-distribution.json
+cloudfront-distribution.json
+Makefile
+README.md
