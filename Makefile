@@ -22,18 +22,18 @@ serve:
 .PHONY: deploy
 deploy: build update-distribution.json
 	@echo "Beginning S3 synchronization..."
-	@aws s3 cp build s3://com.roberthodgen.www${GIT_REV} \
+	@aws s3 cp build s3://${S3_BUCKET}/${GIT_REV} \
 		--recursive \
 		--exclude "*" \
 		--include "*.js" \
 		--include "*.css" \
 		--cache-control "max-age=31536000"
-	@aws s3 cp build s3://com.roberthodgen.www/${GIT_REV} \
+	@aws s3 cp build s3://${S3_BUCKET}/${GIT_REV} \
 		--recursive \
 		--exclude "*" \
 		--include "*.html" \
 		--cache-control "no-cache"
-	@aws s3 cp build s3://com.roberthodgen.www/${GIT_REV} \
+	@aws s3 cp build s3://${S3_BUCKET}/${GIT_REV} \
 		--recursive \
 		--exclude "*.js" \
 		--exclude "*.css" \
